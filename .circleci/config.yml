@@ -6,11 +6,6 @@ jobs:
     steps:
     - checkout
     - run:
-        name: Setup testing environment
-        command: |
-          pip install '.[test]' --user
-          echo $HOME
-    - run:
         name: Run Tests
         command: |
           $HOME/.local/bin/coverage run -m pytest
